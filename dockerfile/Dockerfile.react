@@ -10,9 +10,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY ./matinka-calendar-react ./
 
-RUN pwd
-RUN ls -al
-
 RUN yarn install
 
 # start app
