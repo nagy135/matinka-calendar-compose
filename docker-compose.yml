@@ -22,7 +22,7 @@ services:
         links:
             - database
         volumes:
-            - ./matinka-calendar-api/src:/usr/src/app/src
+            - ./api/src:/usr/src/app/src
 
     react:
         container_name: react
@@ -30,9 +30,9 @@ services:
           context: .
           dockerfile: ./dockerfile/Dockerfile.react
         volumes:
-            - ./matinka-calendar-react/src:/app/src
-            - ./matinka-calendar-react/public:/app/public
-            - ./matinka-calendar-react/assets:/app/assets
+            - ./react/src:/app/src
+            - ./react/public:/app/public
+            - ./react/assets:/app/assets
         ports:
             - "3000:3000"
         stdin_open: true
